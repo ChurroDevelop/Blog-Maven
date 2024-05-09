@@ -17,24 +17,24 @@
 <body class="bg-meWhite grid content-center justify-center min-h-screen w-full">
     <section class="grid bg-white p-7 rounded-lg shadow-md w-96">
         <h3 class="text-meBlack text-xl mb-7">Bienvenido, ingrese los siguientes datos y cree su perfil</h3>
-        <form class="grid" action="inicio.jsp   ">
+        <form class="grid" action="../../../SvPerfil" method="POST">
             <label class="bg-white text-meBlack input input-bordered flex items-center gap-2 mb-4">
                 <i class="fa-solid fa-user opacity-70"></i>
-                <input type="text" class="grow text-meBlack" placeholder="Nombre" />
+                <input type="text" class="grow text-meBlack" placeholder="Nombre" name="nombre"/>
             </label>
             <label class="bg-white text-meBlack input input-bordered flex items-center gap-2 mb-4">
                 <i class="fa-solid fa-user opacity-70"></i>
-                <input type="text" class="grow text-meBlack" placeholder="Apellidos" />
+                <input type="text" class="grow text-meBlack" placeholder="Apellidos" name="apellidos"/>
             </label>
             <label class="bg-white text-meBlack input input-bordered flex items-center gap-2 mb-4">
                 <i class="fa-solid fa-id-card opacity-70"></i>
-                <input type="text" class="grow text-meBlack" placeholder="Número de documento" />
+                <input type="text" class="grow text-meBlack" placeholder="Número de documento" name="numDocumento"/>
             </label>
             <label class="bg-white text-meBlack input input-bordered flex items-center gap-2 mb-4">
                 <i class="fa-solid fa-location-pin opacity-70"></i>
-                <input type="text" class="grow text-meBlack" placeholder="Centro de formación" />
+                <input type="text" class="grow text-meBlack" placeholder="Centro de formación" name="centroFormacion"/>
             </label>
-            <button class="btn bg-meGreen border-none text-white hover:bg-meGreen">Crear perfil</button>
+            <button class="btn bg-meGreen border-none text-white hover:bg-meGreen" type="submit">Crear perfil</button>
         </form>
     </section>
 </body>
