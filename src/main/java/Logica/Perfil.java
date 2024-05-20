@@ -7,19 +7,29 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToOne;
+import javax.persistence.Table;
 
 @Entity
+@Table(name = "Perfil")
 public class Perfil {
     
     @Id
+    @Column(name = "id_perfil")
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private int id;
     
     @Basic
-    @Column(nullable = false)
-    private String nombreUsuario, apellidoUsuarios, centroFormacion;
+    @Column(nullable = false, name = "nombreUsuario")
+    private String nombreUsuario;
+    
+    @Column(nullable = false, name = "apellidoUsuario")
+    private String apellidoUsuarios;
+    
+    @Column(nullable = false, name = "centroFormacion")
+    private String centroFormacion;
     
     @OneToOne
+//    @Column(nullable = true, name = "idUsuarioFk")
     Usuarios usuarioFk;
 
     public Perfil() {

@@ -7,16 +7,19 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
+@Table(name = "Rol")
 public class Rol implements Serializable {
     
     @Id
+    @Column(name = "idRol")
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private int idRol;
     
     @Basic
-    @Column(nullable = false)
+    @Column(nullable = false, name = "nombreRol")
     private String nombreRol;
 
     public Rol() {

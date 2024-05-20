@@ -7,7 +7,8 @@ package Servlets;
 import Logica.ControladoraLogica;
 import Logica.Usuarios;
 import java.io.IOException;
-import java.io.PrintWriter;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -43,13 +44,29 @@ public class SvUsuario extends HttpServlet {
         String correo = request.getParameter("correoInstitucional");
         String contraseña = request.getParameter("contraseña");
         
+        String regex = "\\b[A-Za-z0-9._%+-]+@soy\\.sena\\.edu\\.co\\b";;
+        Pattern p = Pattern.compile(regex);
+        Matcher m = p.matcher(correo);
+        
         Usuarios usu = new Usuarios();
         
-        usu.setCorreoInst(correo);
-        usu.setContraseña(contraseña);
-        control.crearUsuario(usu);
+        try {
+            if (m.matches()) {
+                usu.setCorreoInst(correo);
+                usu.setContraseña(contraseña);
+                control.crearUsuario(usu);
+                response.sendRedirect("Views/Assets/Pages/perfil.jsp");
+            }
+            else{
+                response.sendRedirect("Views/Assets/Pages/registro.jsp");
+            }
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+
         
-        response.sendRedirect("Views/Assets/Pages/registro.jsp");
+        
+        
         
     }
 

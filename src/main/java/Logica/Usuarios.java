@@ -8,19 +8,26 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToOne;
+import javax.persistence.Table;
 
 @Entity
+@Table(name = "Usuarios")
 public class Usuarios implements Serializable {
     
     @Id
+    @Column(name = "idUsuario")
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private int id;
     
     @Basic
-    @Column(nullable = false)
-    private String correoInst, contraseña;
+    @Column(nullable = false, name = "correoInst")
+    private String correoInst;
+    
+    @Column(nullable = false, name = "contraseña")
+    private String contraseña;
     
     @OneToOne
+//    @Column(nullable = true, name = "idRolFk")
     Rol rolFk;
 
     public Usuarios() {
