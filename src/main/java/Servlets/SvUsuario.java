@@ -44,8 +44,8 @@ public class SvUsuario extends HttpServlet {
         String correo = request.getParameter("correoInstitucional");
         String contraseña = request.getParameter("contraseña");
         
-        String regex = "\\b[A-Za-z0-9._%+-]+@soy\\.sena\\.edu\\.co\\b";;
-        Pattern p = Pattern.compile(regex);
+        String regexAprendiz = "\\b[A-Za-z0-9._%+-]+@soy\\.sena\\.edu\\.co\\b";;
+        Pattern p = Pattern.compile(regexAprendiz);
         Matcher m = p.matcher(correo);
         
         Usuarios usu = new Usuarios();
