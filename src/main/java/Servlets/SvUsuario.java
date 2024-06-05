@@ -51,7 +51,7 @@ public class SvUsuario extends HttpServlet {
         Usuarios usu = new Usuarios();
         
         try {
-            if (m.matches()) {
+            if (m.matches()) {  
                 usu.setCorreoInst(correo);
                 usu.setContraseña(contraseña);
                 control.crearUsuario(usu);

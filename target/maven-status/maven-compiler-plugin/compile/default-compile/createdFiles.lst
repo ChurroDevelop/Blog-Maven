@@ -1,1 +1,15 @@
+Persistencia\exceptions\IllegalOrphanException.class
+Persistencia\exceptions\NonexistentEntityException.class
+Persistencia\exceptions\PreexistingEntityException.class
 Logica\Rol_.class
+Persistencia\ControladoraPersistencia.class
+Logica\Usuarios_.class
+Servlets\SvUsuario.class
+Logica\Usuarios.class
+Logica\Perfil_.class
+Persistencia\UsuariosJpaController.class
+Logica\ControladoraLogica.class
+Logica\Perfil.class
+Servlets\SvPerfil.class
+Logica\Rol.class
+Persistencia\RolJpaController.class

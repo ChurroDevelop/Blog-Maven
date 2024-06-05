@@ -6,6 +6,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link href="https://cdn.jsdelivr.net/npm/daisyui@4.10.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="../style/Fondo.css"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -14,7 +15,7 @@
   <title>Inicio - TDA Sena</title>
 </head>
 
-<body class="flex bg-meWhite">
+<body class="flex bg-meWhite fondoGradient">
   <nav class="bg-white p-7 shadow-md sticky top-0 h-screen">
     <div class="grid gap-y-5">
       <hr />

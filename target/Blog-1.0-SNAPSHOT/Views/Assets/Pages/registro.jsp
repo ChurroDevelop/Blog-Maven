@@ -5,12 +5,16 @@
     <meta charset="UTF-8" />
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.10.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="../style/Fondo.css"/>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="../Js/tailwind.config.js"></script>
     <title>Registro - TDA Sena</title>
 </head>
-<body class="bg-meWhite grid content-center justify-center min-h-screen w-full">
+
+<body class="grid content-center justify-center min-h-screen w-full">
+    <div class="min-h-screen w-full absolute -z-10 fondoUno">
+    </div>
     <section class="grid bg-white p-7 rounded-lg shadow-md w-96">
         <h3 class="text-meBlack text-xl text-center mb-7">Regístrese a nuestra plataforma!</h3>
         <form action="../../../SvUsuario" method="POST" class="grid">

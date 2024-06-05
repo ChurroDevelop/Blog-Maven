@@ -9,6 +9,7 @@
       rel="stylesheet"
       type="text/css"
     />
+    <link rel="stylesheet" href="../style/Fondo.css"/>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
@@ -20,7 +21,7 @@
     <script src="../Js/tailwind.config.js"></script>
     <title>Asignar monitor - TDA Sena</title>
   </head>
-  <body class="flex bg-meWhite">
+  <body class="flex bg-meWhite fondoGradient">
     <nav class="bg-white p-7 shadow-md sticky top-0 h-screen">
       <div class="grid gap-y-5">
         <hr />
