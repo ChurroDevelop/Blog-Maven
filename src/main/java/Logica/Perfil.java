@@ -1,5 +1,6 @@
 package Logica;
 
+import java.io.Serializable;
 import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -11,7 +12,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "Perfil")
-public class Perfil {
+public class Perfil implements Serializable {
     
     @Id
     @Column(name = "id_perfil")
@@ -22,6 +23,9 @@ public class Perfil {
     @Column(nullable = false, name = "nombreUsuario")
     private String nombreUsuario;
     
+    @Column(nullable = false, name = "numDocumento")
+    private String numDocumento;
+    
     @Column(nullable = false, name = "apellidoUsuario")
     private String apellidoUsuarios;
     
@@ -29,15 +33,15 @@ public class Perfil {
     private String centroFormacion;
     
     @OneToOne
-//    @Column(nullable = true, name = "idUsuarioFk")
     Usuarios usuarioFk;
 
     public Perfil() {
     }
 
-    public Perfil(int id, String nombreUsuario, String apellidoUsuarios, String centroFormacion, Usuarios usuarioFk) {
+    public Perfil(int id, String nombreUsuario, String numDocumento, String apellidoUsuarios, String centroFormacion, Usuarios usuarioFk) {
         this.id = id;
         this.nombreUsuario = nombreUsuario;
+        this.numDocumento = numDocumento;
         this.apellidoUsuarios = apellidoUsuarios;
         this.centroFormacion = centroFormacion;
         this.usuarioFk = usuarioFk;
@@ -82,7 +86,13 @@ public class Perfil {
     public void setUsuarioFk(Usuarios usuarioFk) {
         this.usuarioFk = usuarioFk;
     }
-    
-    
+
+    public String getNumDocumento() {
+        return numDocumento;
+    }
+
+    public void setNumDocumento(String numDocumento) {
+        this.numDocumento = numDocumento;
+    }
     
 }

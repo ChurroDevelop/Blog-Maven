@@ -7,6 +7,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -21,7 +22,10 @@ public class Rol implements Serializable {
     @Basic
     @Column(nullable = false, name = "nombreRol")
     private String nombreRol;
-
+    
+    @ManyToOne
+    private Usuarios usuario;
+    
     public Rol() {
     }
 

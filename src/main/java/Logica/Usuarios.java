@@ -1,12 +1,14 @@
 package Logica;
 
 import java.io.Serializable;
+import java.util.LinkedList;
 import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
@@ -26,18 +28,17 @@ public class Usuarios implements Serializable {
     @Column(nullable = false, name = "contraseña")
     private String contraseña;
     
-    @OneToOne
-//    @Column(nullable = true, name = "idRolFk")
-    Rol rolFk;
+    @OneToMany(mappedBy = "usuario")
+    private LinkedList<Rol> roles;
 
     public Usuarios() {
     }
 
-    public Usuarios(int id, String correoInst, String contraseña, Rol rolFk) {
+    public Usuarios(int id, String correoInst, String contraseña, LinkedList<Rol> roles) {
         this.id = id;
         this.correoInst = correoInst;
         this.contraseña = contraseña;
-        this.rolFk = rolFk;
+        this.roles = roles;
     }
 
     public int getId() {
@@ -64,14 +65,14 @@ public class Usuarios implements Serializable {
         this.contraseña = contraseña;
     }
 
-    public Rol getRolFk() {
-        return rolFk;
+    public LinkedList<Rol> getRoles() {
+        return roles;
     }
 
-    public void setRolFk(Rol rolFk) {
-        this.rolFk = rolFk;
+    public void setRoles(LinkedList<Rol> roles) {
+        this.roles = roles;
     }
     
     
-    
+
 }

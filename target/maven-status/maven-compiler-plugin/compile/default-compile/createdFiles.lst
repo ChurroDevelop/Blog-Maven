@@ -1,6 +1,7 @@
 Persistencia\exceptions\IllegalOrphanException.class
 Persistencia\exceptions\NonexistentEntityException.class
 Persistencia\exceptions\PreexistingEntityException.class
+Persistencia\PerfilJpaController.class
 Logica\Rol_.class
 Persistencia\ControladoraPersistencia.class
 Logica\Usuarios_.class

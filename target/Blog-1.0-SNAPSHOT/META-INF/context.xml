@@ -1,2 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Context path="/Blog"/>
+<Context path="/Blog">
+  <Resource auth="Container" driverClassName="com.mysql.cj.jdbc.Driver" maxActive="20" maxIdle="10" maxWait="-1" name="ola" password="" type="javax.sql.DataSource" url="jdbc:mysql://localhost:3306/db_blog_maven?serverTimezone = UTC" username="root"/>
+</Context>

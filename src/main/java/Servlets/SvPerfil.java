@@ -38,6 +38,10 @@ public class SvPerfil extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         request.setCharacterEncoding("UTF-8");
+        HttpSession session = request.getSession();
+        String usuario = (String) session.getAttribute("Usuario");
+        System.out.println(usuario);
+        
         String nombre = request.getParameter("nombre");
         String apellido = request.getParameter("apellido");
         String numDocumento = request.getParameter("numDocumento");
@@ -47,6 +51,7 @@ public class SvPerfil extends HttpServlet {
         per.setNombreUsuario(nombre);
         per.setApellidoUsuarios(apellido);
         per.setCentroFormacion(centro);
+        per.setNumDocumento(numDocumento);
         
         
     }
